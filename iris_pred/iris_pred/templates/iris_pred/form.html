@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris prediction</title>
+</head>
+  <body>
+    <form action="{% url 'form'%}" method="post">
+      {% csrf_token %}
+      <fieldset>
+        <legend>Enter iris parameters:</legend>
+
+        <label for="sepal_len">Sepal length</label>
+        <input type="text" id="sepal_len" name="sepal_l"><br />
+
+        <label for="sepal_width">Sepal width</label>
+        <input type="text" id="sepal_width" name="sepal_w"><br />
+
+        <label for="petal_len">Petal length</label>
+        <input type="text" id="petal_len" name="petal_l"><br />
+
+        <label for="petal_width">Petal width</label>
+        <input type="text" id="petal_width" name="petal_w"><br />
+      </fieldset>
+      <input type="submit" value="Predict">
+    </form>
+
+    <h2>Details provided:</h2>
+    <div>
+      <p>Sepal length:{{ sepal_length}}</p>
+      <p>Sepal width:{{ sepal_width }}</p>
+      <p>Petal length:{{ petal_length}}</p>
+      <p>Petal width:{{ petal_width }}</p>
+      <p>Prediction:{{ prediction }}</p>
+    </div>
+  </body>
+</html>
