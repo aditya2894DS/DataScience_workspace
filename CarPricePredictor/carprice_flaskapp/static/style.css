@@ -1,0 +1,10 @@
+.hasborder{
+  border: 3px solid black;
+}
+.output-display{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
